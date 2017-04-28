@@ -29,7 +29,7 @@ public class User implements Serializable {
 	private String company;
 	@Column(nullable = true)
 	private String email;
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private Boolean contact;
 	@Column(nullable = false)
 	private String language;

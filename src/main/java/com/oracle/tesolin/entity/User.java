@@ -24,17 +24,28 @@ public class User implements Serializable {
 	@Column(nullable = false)
 	private String lastname;
 	@Column(nullable = false)
-	private String role;
-	@Column(nullable = true)
-	private String company;
-	@Column(nullable = true)
+    private String language;
+	@Column(nullable = false)
 	private String email;
 	@Column(nullable = true)
-	private Boolean contact;
-	@Column(nullable = false)
-	private String language;
+    private String role;
+    @Column(nullable = true)
+    private String company;
 	@Column(nullable = true)
+	private Boolean contact;
+	@Column(nullable = true, length=4096)
 	private String topic;
+	
+	//Workshop
+	@Column(nullable = true, length=4096)
+    private String opinionBefore;
+    @Column(nullable = true, length=4096)
+    private String opinionNow;
+    @Column(nullable = true, length=4096)
+    private String opinionLike;
+    @Column(nullable = true, length=4096)
+    private String opinionImprove;
+	
 	public long getId() {
 		return id;
 	}
@@ -89,5 +100,29 @@ public class User implements Serializable {
 	public void setTopic(String topic) {
 		this.topic = topic;
 	}
+	public String getOpinionBefore() {
+        return opinionBefore;
+    }
+    public void setOpinionBefore(String opinionBefore) {
+        this.opinionBefore = opinionBefore;
+    }
+    public String getOpinionNow() {
+        return opinionNow;
+    }
+    public void setOpinionNow(String opinionNow) {
+        this.opinionNow = opinionNow;
+    }
+    public String getOpinionLike() {
+        return opinionLike;
+    }
+    public void setOpinionLike(String opinionLike) {
+        this.opinionLike = opinionLike;
+    }
+    public String getOpinionImprove() {
+        return opinionImprove;
+    }
+    public void setOpinionImprove(String opinionImprove) {
+        this.opinionImprove = opinionImprove;
+    }
 	
 }

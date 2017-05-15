@@ -3,6 +3,7 @@ angular.module('oracleform').value('Schema', [
 	key : 'firstname',
 	type : 'input',
 	templateOptions : {
+	    required: true,
 		type : 'input',
 		label : 'First name',
 		placeholder : 'Enter first name'
@@ -11,6 +12,7 @@ angular.module('oracleform').value('Schema', [
 	key : 'lastname',
 	type : 'input',
 	templateOptions : {
+	    required: true,
 		type : 'input',
 		label : 'Last name',
 		placeholder : 'Enter last name'
@@ -27,6 +29,7 @@ angular.module('oracleform').value('Schema', [
 		 {id:'nl',name:'Dutch'},
 		 {id:'it',name:'Italian'},
 		 {id:'es',name:'Spanish'}],
+		required: true,
 		type : 'language',
 		label : 'Language',
 		valueProp: 'id',
@@ -39,9 +42,45 @@ angular.module('oracleform').value('Schema', [
 	templateOptions : {
 		type : 'email',
 		label : 'Email address',
+		required: true,
 		placeholder : 'Enter email'
 	}
 }, 
+{
+    "template": "<hr /><div><strong>If you attended the workshop:</strong></div><br>"
+},
+{
+    key : 'opinionBefore',
+    type : 'textarea',
+    templateOptions : {
+        type : 'input',
+        label : 'What was your opinion on Oracle before the workshop?'
+    }
+},
+{
+    key : 'opinionNow',
+    type : 'textarea',
+    templateOptions : {
+        type : 'input',
+        label : 'What is your opinion now?'
+    }
+},
+{
+    key : 'opinionLike',
+    type : 'textarea',
+    templateOptions : {
+        type : 'input',
+        label : 'What did you like from the workshop?'
+    }
+},
+{
+    key : 'opinionImprove',
+    type : 'textarea',
+    templateOptions : {
+        type : 'input',
+        label : 'What can be improve in the workshop?'
+    }
+},
 {
     "template": "<hr /><div><strong>Professional details:</strong></div>"
 },

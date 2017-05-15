@@ -4,7 +4,7 @@ var task = angular.module('oracleform', ['formly','formlyBootstrap'])
 	    tc.taskSchema = Schema;
 	    tc.taskData=data;
 	    tc.submit = function () {
-	    	if (!(data.lastname&&data.firstname&&data.role&&data.company&&data.email)) {
+	    	if (!(data.lastname&&data.firstname&&data.language&&data.email)) {
 				window.alert('Some missing inputs, please verify that all fields are not empty');
 				return;
 			}

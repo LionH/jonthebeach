@@ -34,7 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 		"/sockjs-node/**",
                 		"/node_modules/**",
                 		"/index.html", 
-                		"/addUser")
+                		"/addUser",
+                		"/h2-console")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin()
